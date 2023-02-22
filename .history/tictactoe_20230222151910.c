@@ -69,7 +69,7 @@ int main(void)
             if (arr[r][c] != -1)
             {
                 printf("Invalid Cell\n");
-                goto Flag2;
+                goto Flag;
             }
             arr[r][c] = 2;
 

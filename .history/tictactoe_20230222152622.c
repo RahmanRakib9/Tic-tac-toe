@@ -25,6 +25,11 @@ void printGridCell(int arr[][4], int n)
     }
 }
 
+int whoWins(int arr[][4],int n);
+{
+    for(int i=1;)
+}
+
 int main(void)
 {
     int n = 3;

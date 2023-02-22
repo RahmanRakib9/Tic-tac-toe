@@ -63,13 +63,13 @@ int main(void)
         else
         {
             int r, c;
-        Flag2:
+        Flag:
             printf("Player 2 Turn (O),Enter Row and Column:  ");
             scanf("%d%d", &r, &c);
             if (arr[r][c] != -1)
             {
                 printf("Invalid Cell\n");
-                goto Flag2;
+                goto Flag;
             }
             arr[r][c] = 2;
 

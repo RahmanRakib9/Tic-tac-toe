@@ -47,14 +47,8 @@ int main(void)
         if (player1)
         {
             int r, c;
-        Flag:
             printf("Player 1 Turn (X),Enter Row and Column:  ");
             scanf("%d%d", &r, &c);
-            if (arr[r][c] != -1)
-            {
-                printf("Invalid Cell\n");
-                goto Flag;
-            }
             arr[r][c] = 1;
 
             player1 = false;
@@ -63,14 +57,10 @@ int main(void)
         else
         {
             int r, c;
-        Flag2:
+            Flag:
             printf("Player 2 Turn (O),Enter Row and Column:  ");
             scanf("%d%d", &r, &c);
-            if (arr[r][c] != -1)
-            {
-                printf("Invalid Cell\n");
-                goto Flag2;
-            }
+            if(arr[r][c]!=)
             arr[r][c] = 2;
 
             player2 = false;
