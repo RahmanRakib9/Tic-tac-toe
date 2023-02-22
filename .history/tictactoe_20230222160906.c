@@ -150,11 +150,9 @@ int main(void)
             printf("PLAYER 2 WON!!\n");
             printWinCell(arr, n, 2);
             break;
-        }
-        else if (isWin(arr, n) == -1)
+        }else if(isWin(arr,n)==-1)
         {
-            printf("\n\n\n\n");
-            printf("MATCH DRAW!!\n");
+            printf("MATCH DRAW!!\")
         }
     }
     return 0;

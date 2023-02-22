@@ -93,9 +93,8 @@ int main(void)
     int arr[4][4];
 
     // after declare 2D array, initially set all array elements to -1 (-1 means there is no element exist)
-    doAllElementsZero(arr, n);
 
-    // initially player one turn then player two
+    
     bool player1 = true;
     bool player2 = false;
 
@@ -151,11 +150,5 @@ int main(void)
             printWinCell(arr, n, 2);
             break;
         }
-        else if (isWin(arr, n) == -1)
-        {
-            printf("\n\n\n\n");
-            printf("MATCH DRAW!!\n");
-        }
     }
-    return 0;
 }

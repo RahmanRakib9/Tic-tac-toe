@@ -151,11 +151,5 @@ int main(void)
             printWinCell(arr, n, 2);
             break;
         }
-        else if (isWin(arr, n) == -1)
-        {
-            printf("\n\n\n\n");
-            printf("MATCH DRAW!!\n");
-        }
     }
-    return 0;
 }

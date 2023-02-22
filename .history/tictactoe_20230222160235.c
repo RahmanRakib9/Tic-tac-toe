@@ -1,15 +1,6 @@
 #include "stdio.h"
 #include "stdbool.h"
 
-void doAllElementsZero(int arr[][4], int n)
-{
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-            arr[i][j] = -1;
-    }
-}
-
 void printGridCell(int arr[][4], int n)
 {
     for (int i = 1; i <= n; i++)
@@ -30,6 +21,17 @@ void printGridCell(int arr[][4], int n)
         if (i < n) // prevent the horizontal bottom most line
             printf("__________________________________");
         printf("\n");
+    }
+}
+
+void takePlayerInput(int arr[][4], int r, int c)
+{
+Flag:
+    // scanf("%d%d", &r, &c);
+    if (arr[r][c] != -1)
+    {
+        printf("Invalid Cell\n");
+        goto Flag;
     }
 }
 
@@ -93,9 +95,12 @@ int main(void)
     int arr[4][4];
 
     // after declare 2D array, initially set all array elements to -1 (-1 means there is no element exist)
-    doAllElementsZero(arr, n);
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+            arr[i][j] = -1;
+    }
 
-    // initially player one turn then player two
     bool player1 = true;
     bool player2 = false;
 
@@ -109,11 +114,11 @@ int main(void)
         Flag:
             printf("Player 1 Turn (X),Enter Row and Column:  ");
             scanf("%d%d", &r, &c);
-            if (arr[r][c] != -1)
-            {
-                printf("Invalid Cell\n");
-                goto Flag;
-            }
+            // if (arr[r][c] != -1)
+            // {
+            //     printf("Invalid Cell\n");
+            //     goto Flag;
+            // }
             arr[r][c] = 1;
 
             player1 = false;
@@ -125,12 +130,12 @@ int main(void)
         Flag2:
             printf("Player 2 Turn (O),Enter Row and Column:  ");
             scanf("%d%d", &r, &c);
-            if (arr[r][c] != -1)
-            {
-                printf("Invalid Cell\n");
-                goto Flag2;
-            }
-            arr[r][c] = 2;
+                // if (arr[r][c] != -1)
+                // {
+                //     printf("Invalid Cell\n");
+                //     goto Flag2;
+                // }
+                arr[r][c] = 2;
 
             player2 = false;
             player1 = true;
@@ -151,11 +156,5 @@ int main(void)
             printWinCell(arr, n, 2);
             break;
         }
-        else if (isWin(arr, n) == -1)
-        {
-            printf("\n\n\n\n");
-            printf("MATCH DRAW!!\n");
-        }
     }
-    return 0;
 }

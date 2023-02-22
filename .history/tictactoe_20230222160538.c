@@ -1,13 +1,9 @@
 #include "stdio.h"
 #include "stdbool.h"
 
-void doAllElementsZero(int arr[][4], int n)
+void doAllElementsZero(int arr[][4],int n)
 {
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-            arr[i][j] = -1;
-    }
+
 }
 
 void printGridCell(int arr[][4], int n)
@@ -93,9 +89,8 @@ int main(void)
     int arr[4][4];
 
     // after declare 2D array, initially set all array elements to -1 (-1 means there is no element exist)
-    doAllElementsZero(arr, n);
+   
 
-    // initially player one turn then player two
     bool player1 = true;
     bool player2 = false;
 
@@ -151,11 +146,5 @@ int main(void)
             printWinCell(arr, n, 2);
             break;
         }
-        else if (isWin(arr, n) == -1)
-        {
-            printf("\n\n\n\n");
-            printf("MATCH DRAW!!\n");
-        }
     }
-    return 0;
 }
