@@ -134,14 +134,14 @@ int main(void)
         // detect who wins
         if (isWin(arr, n) == 1)
         {
-            printf("\n\n\n\n");
+            printf("\n\n\n");
             printf("PLAYER 1 WON!!\n");
             printWinCell(arr, n, 1);
             break;
         }
         else if (isWin(arr, n) == 2)
         {
-            printf("\n\n\n\n");
+            printf("\n\n\n");
             printf("PLAYER 2 WON!!\n");
             printWinCell(arr, n, 2);
             break;

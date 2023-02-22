@@ -141,7 +141,7 @@ int main(void)
         }
         else if (isWin(arr, n) == 2)
         {
-            printf("\n\n\n\n");
+            printf("\n\n\nn");
             printf("PLAYER 2 WON!!\n");
             printWinCell(arr, n, 2);
             break;

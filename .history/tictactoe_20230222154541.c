@@ -67,15 +67,9 @@ void printWinCell(int arr[][4], int n, int whoWins)
             }
             else
             {
-                printf(" ");
+                printf(" ")
             }
-            if (j < n) // prevent the vertical right most side line
-                printf("\t|\t");
         }
-        printf("\n");
-        if (i < n) // prevent the horizontal bottom most line
-            printf("__________________________________");
-        printf("\n\n");
     }
 }
 
@@ -134,16 +128,12 @@ int main(void)
         // detect who wins
         if (isWin(arr, n) == 1)
         {
-            printf("\n\n\n\n");
-            printf("PLAYER 1 WON!!\n");
-            printWinCell(arr, n, 1);
+            printf("Player 1 Won!!\n");
             break;
         }
         else if (isWin(arr, n) == 2)
         {
-            printf("\n\n\n\n");
-            printf("PLAYER 2 WON!!\n");
-            printWinCell(arr, n, 2);
+            printf("Player 2 Won!!\n");
             break;
         }
     }
