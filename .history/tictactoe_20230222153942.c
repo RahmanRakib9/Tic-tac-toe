@@ -112,7 +112,6 @@ int main(void)
         else if (isWin(arr, n) == 2)
         {
             printf("Player 2 Won!!\n");
-            break;
         }
     }
 }

@@ -103,16 +103,10 @@ int main(void)
             player1 = true;
         }
 
-        // detect who wins
-        if (isWin(arr, n) == 1)
+        //detect who wins
+        if(isWin(arr,n)==1)
         {
-            printf("Player 1 Won!!\n");
-            break;
-        }
-        else if (isWin(arr, n) == 2)
-        {
-            printf("Player 2 Won!!\n");
-            break;
+            printf("Player 1 Won!")
         }
     }
 }

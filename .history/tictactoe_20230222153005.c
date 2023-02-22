@@ -25,30 +25,12 @@ void printGridCell(int arr[][4], int n)
     }
 }
 
-int isWin(int arr[][4], int n)
+int isWin(int arr[][4],int n)
 {
-    for (int i = 1; i <= n; i++)
+    for(int i=1;i<=n;i++)
     {
-        // check horizontal win condition
-        if (arr[i][1] == arr[i][2] && arr[i][2] == arr[i][3] && arr[i][1] != -1)
-        {
-            return arr[i][1];
-        }
+        if(arr[])
     }
-    for (int j = 1; j <= n; j++)
-    {
-        // check vertical win condition
-        if (arr[1][j] == arr[2][j] && arr[2][j] == arr[3][j] && arr[1][j] != -1)
-        {
-            return arr[1][j];
-        }
-    }
-    // check principle and secondary diagonal win condition
-    if (arr[1][3] == arr[2][2] && arr[2][2] == arr[3][1] && arr[1][3] != -1)
-    {
-        return arr[1][3];
-    }
-    return -1;
 }
 
 int main(void)
@@ -101,18 +83,6 @@ int main(void)
 
             player2 = false;
             player1 = true;
-        }
-
-        // detect who wins
-        if (isWin(arr, n) == 1)
-        {
-            printf("Player 1 Won!!\n");
-            break;
-        }
-        else if (isWin(arr, n) == 2)
-        {
-            printf("Player 2 Won!!\n");
-            break;
         }
     }
 }

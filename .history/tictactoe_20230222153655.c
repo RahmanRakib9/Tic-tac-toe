@@ -102,17 +102,5 @@ int main(void)
             player2 = false;
             player1 = true;
         }
-
-        // detect who wins
-        if (isWin(arr, n) == 1)
-        {
-            printf("Player 1 Won!!\n");
-            break;
-        }
-        else if (isWin(arr, n) == 2)
-        {
-            printf("Player 2 Won!!\n");
-            break;
-        }
     }
 }
